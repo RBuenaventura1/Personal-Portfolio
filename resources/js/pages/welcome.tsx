@@ -2,6 +2,8 @@ import { Head } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
 import Weather from '../components/Weather';
 import CursorTrail from '../components/CursorTrail';
+import PrintopiaProject from '../components/PrintopiaProject';
+import KahalaProject from '../components/KahalaProject';
 import '../../css/portfolio.css';
 
 const navigation = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
@@ -31,27 +33,6 @@ const skillGroups = [
             'Teamwork',
             'Project Management Fundamentals',
         ],
-    },
-];
-
-const projects = [
-    {
-        number: '01',
-        name: 'Printopia',
-        category: 'Business Management Platform',
-        description:
-            'A platform designed for printing business processes through 3D visualization and automated delegation.',
-        role: 'Team Member',
-        className: 'project-printopia',
-    },
-    {
-        number: '02',
-        name: 'Nike Club',
-        category: 'E-commerce Storefront Mockup',
-        description:
-            'A responsive storefront mockup focused on clean UI/UX, dynamic navigation, and modern product showcase grids.',
-        role: 'Team Member',
-        className: 'project-nike',
     },
 ];
 
@@ -360,41 +341,8 @@ export default function Welcome() {
                         </p>
 
                         <div className="projects-grid">
-                            {projects.map((project) => (
-                                <article
-                                    key={project.name}
-                                    className="project-card"
-                                >
-                                    <div
-                                        className={`project-art ${project.className}`}
-                                        aria-hidden="true"
-                                    >
-                                        <span>{project.number} / PROJECT</span>
-                                        <strong>{project.name}</strong>
-                                        <small>Illustrative project cover</small>
-                                    </div>
-
-                                    <div className="project-content">
-                                        <p className="eyebrow">
-                                            {project.category}
-                                        </p>
-
-                                        <h3>{project.name}</h3>
-                                        <p>{project.description}</p>
-
-                                        <div className="project-footer">
-                                            <span>Role: {project.role}</span>
-
-                                            <a href="#contact">
-                                                Ask about this project{' '}
-                                                <span aria-hidden="true">
-                                                    ↗
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            ))}
+                            <PrintopiaProject />
+                            <KahalaProject />
                         </div>
                     </section>
 

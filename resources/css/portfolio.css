@@ -549,9 +549,9 @@
     color: #38513a;
 }
 
-.project-nike {
-    background: #ebe1d5;
-    color: #684330;
+.project-kahala {
+    background: #dce9e5;
+    color: #28534c;
 }
 
 .project-art>span {
@@ -610,9 +610,9 @@
     color: #d3e5ce;
 }
 
-.portfolio[data-theme='dark'] .project-nike {
-    background: #40332d;
-    color: #f0d7bd;
+.portfolio[data-theme='dark'] .project-kahala {
+    background: #203c40;
+    color: #d2eae4;
 }
 
 /* Contact section */
@@ -813,6 +813,189 @@
     border-radius: 50%;
     background: #b9deef;
     box-shadow: 0 0 10px #b9deef55;
+}
+
+/* Printopia project showcase */
+
+.showcase-cover {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: var(--surface);
+}
+
+.showcase-cover>img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.showcase-cover-label {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 11px;
+}
+
+.showcase-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.showcase-tags>span {
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.showcase-showcase {
+    margin-top: 22px;
+    border-block: 1px solid var(--line);
+}
+
+.showcase-showcase>summary {
+    padding-block: 16px;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 12px;
+    list-style: disclosure-closed inside;
+}
+
+.showcase-showcase[open]>summary {
+    list-style-type: disclosure-open;
+}
+
+.showcase-gallery {
+    display: grid;
+    gap: 22px;
+    padding-bottom: 22px;
+}
+
+.showcase-media {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--card);
+}
+
+.showcase-media>a {
+    display: block;
+}
+
+.showcase-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.showcase-media video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1896 / 960;
+    background: #101820;
+}
+
+.showcase-media figcaption {
+    padding: 16px;
+    border-top: 1px solid var(--line);
+}
+
+.showcase-media figcaption>strong {
+    display: block;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.showcase-media figcaption>p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.showcase-video-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    font-size: 11px;
+    text-decoration: underline !important;
+}
+
+.showcase-scope {
+    padding: 14px;
+    border-left: 2px solid var(--accent);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.project-contributions {
+    margin-top: 22px;
+}
+
+.project-contributions h4 {
+    margin: 0 0 10px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.project-contributions ul {
+    display: grid;
+    gap: 8px;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 12px;
+    list-style: disc;
+}
+
+/* Project development status */
+
+.project-development-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 16px;
+    padding: 5px 11px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: var(--surface);
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.project-development-badge>span {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.project-content>.kahala-description {
+    color: var(--muted);
+    font-size: 13px;
 }
 
 /* Hide decorative cursor effects on touch devices */
