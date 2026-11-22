@@ -38,11 +38,11 @@ export default function PrintopiaProject() {
     return (
         <article className="project-card">
             <a
-                href="/projects/printopia/home.png"
+                href="https://printopia.sbs/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="showcase-cover"
-                aria-label="Open the Printopia storefront screenshot in a new tab"
+                aria-label="Visit Printopia in a new tab"
             >
                 <img
                     src="/projects/printopia/home.png"
@@ -167,7 +167,7 @@ export default function PrintopiaProject() {
                                         rel="noopener noreferrer"
                                         className="showcase-video-link"
                                     >
-                                        Open video separately ↗
+                                        Open video separately
                                     </a>
                                 </figcaption>
                             </figure>
@@ -184,9 +184,12 @@ export default function PrintopiaProject() {
                 <div className="project-footer">
                     <span>Role: Front-end Developer &amp; Integration Contributor</span>
 
-                    <a href="#contact">
-                        Ask about this project{' '}
-                        <span aria-hidden="true">↗</span>
+                    <a
+                        href="https://printopia.sbs/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit website
                     </a>
                 </div>
             </div>

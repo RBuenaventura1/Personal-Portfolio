@@ -23,11 +23,11 @@ export default function KahalaProject() {
     return (
         <article className="project-card">
             <a
-                href="/projects/kahala/home.png"
+                href="https://kahala-resort.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="showcase-cover"
-                aria-label="Open the Kahala Resort homepage screenshot in a new tab"
+                aria-label="Visit Kahala Resort in a new tab"
             >
                 <img
                     src="/projects/kahala/home.png"
@@ -115,9 +115,13 @@ export default function KahalaProject() {
                 <div className="project-footer">
                     <span>Project in progress</span>
 
-                    <a href="#contact">
-                        Ask about this project{' '}
-                        <span aria-hidden="true">↗</span>
+                    <a
+                        href="https://kahala-resort.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit website
+                        <span aria-hidden="true"> ↗</span>
                     </a>
                 </div>
             </div>
