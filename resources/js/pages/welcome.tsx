@@ -4,6 +4,7 @@ import Weather from '../components/Weather';
 import CursorTrail from '../components/CursorTrail';
 import PrintopiaProject from '../components/PrintopiaProject';
 import KahalaProject from '../components/KahalaProject';
+import ThemeMusic from '../components/ThemeMusic';
 import '../../css/portfolio.css';
 
 const navigation = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
@@ -155,6 +156,8 @@ export default function Welcome() {
                                 </span>
                             </button>
 
+                            <ThemeMusic theme={theme} />
+
                             <button
                                 type="button"
                                 className="menu-button"
@@ -192,12 +195,10 @@ export default function Welcome() {
                             <div className="hero-actions">
                                 <a href="#projects" className="button">
                                     Explore my work
-                                    <span aria-hidden="true">↗</span>
                                 </a>
 
                                 <a href="#contact" className="text-link">
                                     Let’s connect
-                                    <span aria-hidden="true">↗</span>
                                 </a>
                             </div>
 
@@ -291,7 +292,6 @@ export default function Welcome() {
                                             className="button"
                                         >
                                             Download résumé
-                                            <span aria-hidden="true">↓</span>
                                         </a>
 
                                         <a
@@ -301,7 +301,6 @@ export default function Welcome() {
                                             className="text-link"
                                         >
                                             GitHub
-                                            <span aria-hidden="true">↗</span>
                                         </a>
 
                                         <a
@@ -311,12 +310,10 @@ export default function Welcome() {
                                             className="text-link"
                                         >
                                             LinkedIn
-                                            <span aria-hidden="true">↗</span>
                                         </a>
 
                                         <a href="#contact" className="text-link">
                                             Get in touch
-                                            <span aria-hidden="true">↗</span>
                                         </a>
                                     </div>
                                 </div>
@@ -429,7 +426,6 @@ export default function Welcome() {
                             className="contact-email"
                         >
                             rylieb875@gmail.com
-                            <span aria-hidden="true">↗</span>
                         </a>
                     </section>
                 </main>

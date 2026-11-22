@@ -38,6 +38,20 @@
     color-scheme: dark;
 }
 
+/* Softer sunny palette */
+
+.portfolio[data-theme='light'] {
+    --background: #eeece4;
+    --surface: #e4e6dc;
+    --card: #f3f0e8;
+    --text: #293c35;
+    --muted: #59655d;
+    --line: #c9cec3;
+    --accent: #45624b;
+    --button-background: #334e3e;
+    --button-text: #faf8f0;
+}
+
 /* Base styles */
 
 .portfolio *,
@@ -682,6 +696,8 @@
 
 /* Sunny light mode */
 
+/* Soft morning sunshine */
+
 .weather-sun {
     position: absolute;
     top: -110px;
@@ -689,23 +705,77 @@
     width: 460px;
     height: 460px;
     border-radius: 50%;
+    pointer-events: none;
+
     background: radial-gradient(circle,
-            #f4c75e38 0%,
-            #f4c75e18 42%,
+            #dbc08024 0%,
+            #dbc08012 38%,
             transparent 70%);
-    animation: sunshine-breathe 8s ease-in-out infinite;
+
+    animation: none;
 }
+
+/* Broad, softly feathered rays */
+
+/* Visible, softly feathered sun rays */
+
+/* Soft, continuously rotating sun rays */
+
+.weather-sun::before {
+    content: '';
+    position: absolute;
+    inset: -48%;
+    border-radius: 50%;
+    pointer-events: none;
+    transform-origin: center;
+
+    background: repeating-conic-gradient(from 0deg,
+            transparent 0deg 10deg,
+            rgba(176, 140, 70, 0.18) 16deg 22deg,
+            transparent 30deg 45deg);
+
+    -webkit-mask-image: radial-gradient(circle,
+            transparent 7%,
+            #000 18%,
+            #000 34%,
+            transparent 65%);
+
+    mask-image: radial-gradient(circle,
+            transparent 7%,
+            #000 18%,
+            #000 34%,
+            transparent 65%);
+
+    filter: blur(12px);
+    opacity: 0.6;
+    animation: sunrays-rotate 100s linear infinite;
+}
+
+/* Muted sun disc */
 
 .weather-sun::after {
     content: '';
     position: absolute;
-    top: 160px;
-    left: 160px;
-    width: 100px;
-    height: 100px;
+    top: calc(50% - 38px);
+    left: calc(50% - 38px);
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
-    background: #e5ba5266;
-    box-shadow: 0 0 65px #efc56955;
+
+    background: radial-gradient(circle at 40% 35%,
+            #e4cf994d,
+            #cdaa6138);
+
+    box-shadow:
+        0 0 35px #d8b97420,
+        0 0 85px #d8b97412;
+}
+
+/* Softer cloud color in sunny mode */
+
+.portfolio[data-theme='light'] .weather-cloud {
+    background: #e0e2d566;
+    filter: blur(16px);
 }
 
 .weather-cloud {
@@ -752,24 +822,16 @@
     animation: cloud-drift 30s ease-in-out -12s infinite alternate-reverse;
 }
 
-.weather-rain {
-    display: none;
-}
-
 /* Rainy dark mode */
+/* Falling rain behind the glass droplets */
 
-.portfolio[data-theme='dark'] .weather-sun {
+.weather-rain {
+    position: absolute;
+    inset: 0;
     display: none;
-}
-
-.portfolio[data-theme='dark'] .weather-cloud {
-    background: #7895aa12;
-    filter: blur(25px);
 }
 
 .portfolio[data-theme='dark'] .weather-rain {
-    position: absolute;
-    inset: 0;
     display: block;
 }
 
@@ -780,10 +842,136 @@
     height: 65px;
     background: linear-gradient(to bottom,
             transparent,
-            #b9d8ec45);
-    animation-name: rainfall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+            #b9d8ec30);
+    animation: rainfall linear infinite;
+}
+
+.portfolio[data-theme='dark'] .weather-sun {
+    display: none;
+}
+
+.portfolio[data-theme='dark'] .weather-cloud {
+    background: #7895aa12;
+    filter: blur(25px);
+}
+
+/* Rain on glass */
+
+.glass-rain {
+    position: absolute;
+    inset: 0;
+    display: none;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.portfolio[data-theme='dark'] .glass-rain {
+    display: block;
+}
+
+/* Subtle light across the glass */
+
+.glass-rain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 85% 5%,
+            #b8d9e40d,
+            transparent 50%),
+        linear-gradient(115deg,
+            transparent 30%,
+            #a0c1cf04 48%,
+            transparent 65%);
+}
+
+/* Stationary water beads */
+
+.glass-drop {
+    position: absolute;
+    display: block;
+    opacity: 0.55;
+
+    border: 1px solid #c8e5ee24;
+
+    border-radius:
+        46% 54% 48% 52% / 62% 60% 40% 38%;
+
+    background:
+        radial-gradient(ellipse at 28% 20%,
+            #effaff80 0%,
+            #d3edf033 12%,
+            transparent 35%),
+        radial-gradient(ellipse at 72% 82%,
+            #b8dbe238 0%,
+            transparent 45%),
+        linear-gradient(145deg,
+            #bed9e612,
+            #020b1180 65%,
+            #92bdcf1f);
+
+    box-shadow:
+        inset 1px 1px 2px #effaff26,
+        inset -1px -2px 3px #00000080,
+        1px 2px 3px #00000045;
+}
+
+/* Small variations in the droplet shapes */
+
+.glass-drop:nth-child(3n) {
+    border-radius: 55% 45% 42% 58% / 58% 65% 35% 42%;
+    opacity: 0.35;
+}
+
+.glass-drop:nth-child(5n) {
+    border-radius: 48% 52% 58% 42% / 65% 55% 45% 35%;
+    opacity: 0.7;
+}
+
+/* A few droplets slowly slide down */
+
+.glass-drop--sliding {
+    animation:
+        glass-slide var(--slide-duration) var(--slide-delay) linear infinite;
+}
+
+/* Faint water trail above a moving droplet */
+
+.glass-drop--sliding::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% - 2px);
+    left: 50%;
+    width: 2px;
+    height: 65px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+
+    background: linear-gradient(to bottom,
+            transparent,
+            #b8dbe208 60%,
+            #b8dbe22b);
+}
+
+@keyframes glass-slide {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -12vh, 0);
+    }
+
+    12% {
+        opacity: 0.6;
+    }
+
+    82% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate3d(8px, 65vh, 0) scale(0.92, 1.15);
+    }
 }
 
 /* Cursor trail */
@@ -1057,6 +1245,41 @@
     align-items: center;
 }
 
+/* Theme background music */
+
+.theme-music {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.music-button {
+    min-width: 40px;
+}
+
+.music-button[aria-pressed='true'] {
+    border-color: var(--accent);
+}
+
+.music-message:empty {
+    display: none;
+}
+
+.music-message:not(:empty) {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    z-index: 5;
+    width: 230px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+    box-shadow: 0 8px 24px #00000020;
+    font-size: 12px;
+}
+
 @media (min-width: 721px) {
     .about-grid.about-with-portrait {
         grid-template-columns:
@@ -1099,17 +1322,6 @@
     }
 }
 
-@keyframes rainfall {
-    from {
-        transform: translate(0, -80px) rotate(12deg);
-    }
-
-    to {
-        transform:
-            translate(-160px, calc(100vh + 160px)) rotate(12deg);
-    }
-}
-
 /* Button hover and .96 press animation */
 
 .portfolio .button,
@@ -1146,13 +1358,6 @@
 
     .weather-sun,
     .weather-cloud,
-    .raindrop {
-        animation: none;
-    }
-
-    .weather-rain {
-        display: none !important;
-    }
 
     .cursor-trail {
         display: none;
@@ -1163,6 +1368,19 @@
     .portfolio .menu-button {
         transition: none;
         transform: none;
+    }
+
+    .glass-drop--sliding {
+        display: none;
+    }
+
+    .weather-rain {
+        display: none !important;
+    }
+
+    .weather-sun::before,
+    .weather-sun::after {
+        animation: none;
     }
 }
 
@@ -1230,9 +1448,6 @@
         right: -160px;
     }
 
-    .raindrop:nth-child(n + 25) {
-        display: none;
-    }
 
     .navigation {
         display: none;
@@ -1303,6 +1518,22 @@
         order: 3;
         width: 100%;
     }
+
+    .music-label {
+        display: none;
+    }
+
+    .music-button {
+        padding: 8px 10px;
+    }
+
+    .glass-drop:nth-child(n + 45) {
+        display: none;
+    }
+
+    .raindrop:nth-child(n + 25) {
+        display: none;
+    }
 }
 
 @media (max-width: 390px) {
@@ -1312,5 +1543,28 @@
 
     .hero-actions {
         gap: 20px;
+    }
+}
+
+@keyframes rainfall {
+    from {
+        transform: translate(0, -80px) rotate(12deg);
+    }
+
+    to {
+        transform:
+            translate(-160px, calc(100vh + 160px)) rotate(12deg);
+    }
+}
+
+/* Quiet movement without flashing or pulsing */
+
+@keyframes sunrays-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
