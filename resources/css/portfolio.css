@@ -998,6 +998,72 @@
     font-size: 13px;
 }
 
+
+/* About portrait */
+
+.about-grid.about-with-portrait {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 380px;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+}
+
+.about-photo>img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-photo figcaption {
+    display: grid;
+    gap: 5px;
+    padding: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.about-photo figcaption strong {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.about-photo figcaption span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.about-details {
+    display: grid;
+    gap: 30px;
+    min-width: 0;
+}
+
+.about-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+    margin-top: 24px;
+    align-items: center;
+}
+
+@media (min-width: 721px) {
+    .about-grid.about-with-portrait {
+        grid-template-columns:
+            minmax(0, 0.85fr) minmax(0, 1.35fr);
+    }
+}
+
 /* Hide decorative cursor effects on touch devices */
 
 @media (hover: none),

@@ -233,51 +233,111 @@ export default function Welcome() {
                             <em>A builder by choice.</em>
                         </h2>
 
-                        <div className="about-grid">
-                            <div className="about-copy">
-                                <p>
-                                    I’m Rylie R. Buenaventura, pursuing a
-                                    Bachelor of Science in Information
-                                    Technology with a specialization in Web
-                                    and Mobile Application at FEU Institute
-                                    of Technology.
-                                </p>
+                        <div className="about-grid about-with-portrait">
+                            <figure className="about-photo">
+                                <img
+                                    src="/images/rylie-portrait.png"
+                                    alt="Portrait of Rylie Buenaventura"
+                                    width={800}
+                                    height={1000}
+                                    loading="lazy"
+                                    decoding="async"
+                                />
 
-                                <p>
-                                    I enjoy exploring how thoughtful
-                                    interfaces, programming, and data come
-                                    together to create useful applications.
-                                </p>
+                                <figcaption>
+                                    <strong>Rylie R. Buenaventura</strong>
+                                    <span>Web &amp; Mobile Application Student</span>
+                                </figcaption>
+                            </figure>
 
-                                <p>
-                                    Beyond development, my interests include
-                                    digital photography and game development,
-                                    especially design, mechanics, and player
-                                    psychology.
-                                </p>
+                            <div className="about-details">
+                                <div className="about-copy">
+                                    <p>
+                                        I’m Rylie R. Buenaventura, pursuing a
+                                        Bachelor of Science in Information Technology
+                                        with a specialization in Web and Mobile
+                                        Application at FEU Institute of Technology.
+                                    </p>
 
-                                <p className="organization">
-                                    Member, Alliance of Information
-                                    Technology Students · 2025–present
-                                </p>
-                            </div>
+                                    <p>
+                                        I enjoy exploring how thoughtful interfaces,
+                                        programming, and data come together to create
+                                        useful applications.
+                                    </p>
 
-                            <aside className="education-card">
-                                <p className="eyebrow">My current chapter</p>
+                                    <p>
+                                        My project experience includes customer ordering
+                                        workflows, dashboard interfaces, Cloudinary media
+                                        integration, and a Groq-powered chatbot.
+                                        I’m also developing Kahala Resort’s website
+                                        and reservation experience.
+                                    </p>
 
-                                <h3>FEU Institute of Technology</h3>
+                                    <p>
+                                        Beyond development, my interests include
+                                        digital photography and game development,
+                                        especially design, mechanics, and player psychology.
+                                    </p>
 
-                                <p>
-                                    BS Information Technology
-                                    <br />
-                                    Web &amp; Mobile Application
-                                </p>
+                                    <p className="organization">
+                                        Member, Alliance of Information Technology
+                                        Students · 2025–present
+                                    </p>
 
-                                <div className="graduation">
-                                    <span>Expected graduation</span>
-                                    <strong>2027</strong>
+                                    <div className="about-links">
+                                        <a
+                                            href="/documents/rylie-buenaventura-resume.pdf"
+                                            download="Rylie-Buenaventura-Resume.pdf"
+                                            className="button"
+                                        >
+                                            Download résumé
+                                            <span aria-hidden="true">↓</span>
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/RBuenaventura1"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-link"
+                                        >
+                                            GitHub
+                                            <span aria-hidden="true">↗</span>
+                                        </a>
+
+                                        <a
+                                            href="https://www.linkedin.com/in/rylie-buenaventura/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-link"
+                                        >
+                                            LinkedIn
+                                            <span aria-hidden="true">↗</span>
+                                        </a>
+
+                                        <a href="#contact" className="text-link">
+                                            Get in touch
+                                            <span aria-hidden="true">↗</span>
+                                        </a>
+                                    </div>
                                 </div>
-                            </aside>
+
+                                <aside className="education-card">
+                                    <p className="eyebrow">My current chapter</p>
+
+                                    <h3>FEU Institute of Technology</h3>
+
+                                    <p>
+                                        BS Information Technology
+                                        <br />
+                                        Web &amp; Mobile Application
+                                    </p>
+
+                                    <div className="graduation">
+                                        <span>Expected graduation</span>
+                                        <strong>2027</strong>
+                                    </div>
+                                </aside>
+                            </div>
                         </div>
                     </section>
 
