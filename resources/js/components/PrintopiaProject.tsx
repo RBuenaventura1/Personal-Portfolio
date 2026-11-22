@@ -60,16 +60,14 @@ export default function PrintopiaProject() {
             </a>
 
             <div className="project-content">
-                <p className="eyebrow">
-                    Printing platform · Team project
-                </p>
+                <p className="eyebrow">Printing platform · Team project</p>
 
                 <h3>Printopia</h3>
 
                 <p>
-                    A printing platform with a customer-facing product
-                    catalog, artwork customization, interactive 3D
-                    previews, and an order dashboard.
+                    A printing platform with a customer-facing product catalog,
+                    artwork customization, interactive 3D previews, and an order
+                    dashboard.
                 </p>
 
                 <div className="project-contributions">
@@ -83,7 +81,8 @@ export default function PrintopiaProject() {
                             uploads and storage.
                         </li>
                         <li>
-                            Integrated Groq AI to power the customer-facing chatbot.
+                            Integrated Groq AI to power the customer-facing
+                            chatbot.
                         </li>
                     </ul>
                 </div>
@@ -96,9 +95,7 @@ export default function PrintopiaProject() {
                 </div>
 
                 <details className="showcase-showcase">
-                    <summary>
-                        View screenshots &amp; demos
-                    </summary>
+                    <summary>View screenshots &amp; demos</summary>
 
                     <div className="showcase-gallery">
                         {screenshots.map((screenshot) => (
@@ -121,22 +118,15 @@ export default function PrintopiaProject() {
                                 </a>
 
                                 <figcaption>
-                                    <strong>
-                                        {screenshot.title}
-                                    </strong>
+                                    <strong>{screenshot.title}</strong>
 
-                                    <p>
-                                        {screenshot.description}
-                                    </p>
+                                    <p>{screenshot.description}</p>
                                 </figcaption>
                             </figure>
                         ))}
 
                         {demonstrations.map((demo, index) => (
-                            <figure
-                                key={demo.src}
-                                className="showcase-media"
-                            >
+                            <figure key={demo.src} className="showcase-media">
                                 <video
                                     controls
                                     playsInline
@@ -145,13 +135,9 @@ export default function PrintopiaProject() {
                                     aria-label={demo.title}
                                     aria-describedby={`showcase-demo-${index}`}
                                 >
-                                    <source
-                                        src={demo.src}
-                                        type="video/mp4"
-                                    />
-
-                                    Your browser does not support
-                                    embedded video.
+                                    <source src={demo.src} type="video/mp4" />
+                                    Your browser does not support embedded
+                                    video.
                                 </video>
 
                                 <figcaption>
@@ -174,15 +160,17 @@ export default function PrintopiaProject() {
                         ))}
 
                         <p className="showcase-scope">
-                            This showcase covers the customer-facing
-                            experience. Internal administration and
-                            employee workflows are confidential.
+                            This showcase covers the customer-facing experience.
+                            Internal administration and employee workflows are
+                            confidential.
                         </p>
                     </div>
                 </details>
 
                 <div className="project-footer">
-                    <span>Role: Front-end Developer &amp; Integration Contributor</span>
+                    <span>
+                        Role: Front-end Developer &amp; Integration Contributor
+                    </span>
 
                     <a
                         href="https://printopia.sbs/"

@@ -4,12 +4,7 @@ type ThemeMusicProps = {
     theme: 'light' | 'dark';
 };
 
-type PlaybackStatus =
-    | 'off'
-    | 'loading'
-    | 'playing'
-    | 'blocked'
-    | 'error';
+type PlaybackStatus = 'off' | 'loading' | 'playing' | 'blocked' | 'error';
 
 const preferenceKey = 'portfolio-music';
 
@@ -19,8 +14,7 @@ export default function ThemeMusic({ theme }: ThemeMusicProps) {
     const preferenceLoaded = useRef(false);
     const operation = useRef(0);
 
-    const [status, setStatus] =
-        useState<PlaybackStatus>('loading');
+    const [status, setStatus] = useState<PlaybackStatus>('loading');
 
     const [message, setMessage] = useState('');
 
@@ -34,30 +28,33 @@ export default function ThemeMusic({ theme }: ThemeMusicProps) {
         setStatus('loading');
         setMessage('');
 
-        void audio.play().then(() => {
-            if (currentOperation !== operation.current) return;
+        void audio
+            .play()
+            .then(() => {
+                if (currentOperation !== operation.current) return;
 
-            setStatus('playing');
-        }).catch((error: unknown) => {
-            if (currentOperation !== operation.current) return;
+                setStatus('playing');
+            })
+            .catch((error: unknown) => {
+                if (currentOperation !== operation.current) return;
 
-            if (
-                error instanceof DOMException &&
-                error.name === 'NotAllowedError'
-            ) {
-                // Keep the intention to play.
-                // Retry during a visitor interaction.
-                setStatus('blocked');
-                return;
-            }
+                if (
+                    error instanceof DOMException &&
+                    error.name === 'NotAllowedError'
+                ) {
+                    // Keep the intention to play.
+                    // Retry during a visitor interaction.
+                    setStatus('blocked');
+                    return;
+                }
 
-            wantsMusic.current = false;
-            setStatus('error');
+                wantsMusic.current = false;
+                setStatus('error');
 
-            setMessage(
-                'Audio could not load. Check the files in public/audio.',
-            );
-        });
+                setMessage(
+                    'Audio could not load. Check the files in public/audio.',
+                );
+            });
     }, []);
 
     useEffect(() => {
@@ -80,10 +77,7 @@ export default function ThemeMusic({ theme }: ThemeMusicProps) {
         audio.pause();
 
         audio.volume = 0.18;
-        audio.src =
-            theme === 'light'
-                ? '/audio/sunny.mp3'
-                : '/audio/rainy.mp3';
+        audio.src = theme === 'light' ? '/audio/sunny.mp3' : '/audio/rainy.mp3';
 
         audio.load();
 
@@ -124,15 +118,9 @@ export default function ThemeMusic({ theme }: ThemeMusicProps) {
             operation.current += 1;
             audio.pause();
 
-            document.removeEventListener(
-                'click',
-                handleInteraction,
-            );
+            document.removeEventListener('click', handleInteraction);
 
-            document.removeEventListener(
-                'keydown',
-                handleInteraction,
-            );
+            document.removeEventListener('keydown', handleInteraction);
         };
     }, [theme, startPlayback]);
 
@@ -178,19 +166,14 @@ export default function ThemeMusic({ theme }: ThemeMusicProps) {
         status === 'playing'
             ? 'Music on'
             : status === 'loading'
-                ? 'Starting'
-                : status === 'blocked'
-                    ? 'Start music'
-                    : 'Music off';
+              ? 'Starting'
+              : status === 'blocked'
+                ? 'Start music'
+                : 'Music off';
 
     return (
         <div className="theme-music" data-music-controls>
-            <audio
-                ref={audioRef}
-                loop
-                preload="none"
-                aria-hidden="true"
-            />
+            <audio ref={audioRef} loop preload="none" aria-hidden="true" />
 
             <button
                 type="button"
@@ -205,9 +188,7 @@ export default function ThemeMusic({ theme }: ThemeMusicProps) {
             >
                 <span aria-hidden="true">♫</span>
 
-                <span className="music-label">
-                    {buttonText}
-                </span>
+                <span className="music-label">{buttonText}</span>
             </button>
 
             <span className="music-message" role="status">

@@ -5,8 +5,8 @@ const droplets = Array.from({ length: 72 }, (_, index) => {
 
     return {
         id: index,
-        left: ((index * 37 + 11) % 100),
-        top: ((index * 61 + 7) % 100),
+        left: (index * 37 + 11) % 100,
+        top: (index * 61 + 7) % 100,
         width: size,
         height: size * (1.2 + (index % 4) * 0.2),
         sliding: index % 7 === 0,

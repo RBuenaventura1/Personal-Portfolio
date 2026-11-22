@@ -43,9 +43,7 @@ export default function KahalaProject() {
             </a>
 
             <div className="project-content">
-                <p className="eyebrow">
-                    Resort Website &amp; Reservations
-                </p>
+                <p className="eyebrow">Resort Website &amp; Reservations</p>
 
                 <h3>Kahala Resort</h3>
 
@@ -55,9 +53,9 @@ export default function KahalaProject() {
                 </span>
 
                 <p className="kahala-description">
-                    A resort website in development, bringing together
-                    an accommodation-focused landing page, guest
-                    sign-in, and a reservation experience.
+                    A resort website in development, bringing together an
+                    accommodation-focused landing page, guest sign-in, and a
+                    reservation experience.
                 </p>
 
                 <div className="showcase-tags">
@@ -67,9 +65,7 @@ export default function KahalaProject() {
                 </div>
 
                 <details className="showcase-showcase">
-                    <summary>
-                        View development screenshots
-                    </summary>
+                    <summary>View development screenshots</summary>
 
                     <div className="showcase-gallery">
                         {screenshots.map((screenshot) => (
@@ -92,22 +88,17 @@ export default function KahalaProject() {
                                 </a>
 
                                 <figcaption>
-                                    <strong>
-                                        {screenshot.title}
-                                    </strong>
+                                    <strong>{screenshot.title}</strong>
 
-                                    <p>
-                                        {screenshot.description}
-                                    </p>
+                                    <p>{screenshot.description}</p>
                                 </figcaption>
                             </figure>
                         ))}
 
                         <p className="showcase-scope">
-                            These screenshots show the current
-                            development version. The interface and
-                            features may change as the project
-                            progresses.
+                            These screenshots show the current development
+                            version. The interface and features may change as
+                            the project progresses.
                         </p>
                     </div>
                 </details>

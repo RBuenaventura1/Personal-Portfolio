@@ -21,16 +21,16 @@ My personal portfolio showcasing my background, skills, certifications, and proj
 
 ## Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| Laravel 13 | Backend and routing |
-| React + TypeScript | User interface |
-| Inertia.js | Laravel and React integration |
-| CSS | Layout, themes, and animations |
-| Supabase PostgreSQL | Database |
-| Vite+ | Frontend development and builds |
+| Technology          | Purpose                            |
+| ------------------- | ---------------------------------- |
+| Laravel 13          | Backend and routing                |
+| React + TypeScript  | User interface                     |
+| Inertia.js          | Laravel and React integration      |
+| CSS                 | Layout, themes, and animations     |
+| Supabase PostgreSQL | Database                           |
+| Vite+               | Frontend development and builds    |
 | Docker + FrankenPHP | Production application environment |
-| Vercel | Hosting and deployment |
+| Vercel              | Hosting and deployment             |
 
 ## Featured Projects
 
@@ -204,22 +204,22 @@ Manual checks completed for the first release include:
 
 ## Project Structure
 
-| Path | Purpose |
-|---|---|
-| `resources/js/pages/welcome.tsx` | Portfolio page and personal content |
-| `resources/js/components/Weather.tsx` | Decorative weather elements |
-| `resources/js/components/CursorTrail.tsx` | Pointer trail behavior |
-| `resources/js/components/PrintopiaProject.tsx` | Printopia showcase |
-| `resources/js/components/KahalaProject.tsx` | Kahala Resort showcase |
-| `resources/css/app.css` | Application styles and framework configuration |
-| `resources/css/portfolio.css` | Portfolio layout, themes, and effects |
-| `public/projects/` | Project screenshots and demonstrations |
-| `public/images/` | Personal portrait |
-| `public/documents/` | Public résumé |
-| `routes/web.php` | Web routes |
-| `Dockerfile` | Production image and asset build |
-| `Caddyfile` | Production web server configuration |
-| `.dockerignore` | Files excluded from the container image |
+| Path                                           | Purpose                                        |
+| ---------------------------------------------- | ---------------------------------------------- |
+| `resources/js/pages/welcome.tsx`               | Portfolio page and personal content            |
+| `resources/js/components/Weather.tsx`          | Decorative weather elements                    |
+| `resources/js/components/CursorTrail.tsx`      | Pointer trail behavior                         |
+| `resources/js/components/PrintopiaProject.tsx` | Printopia showcase                             |
+| `resources/js/components/KahalaProject.tsx`    | Kahala Resort showcase                         |
+| `resources/css/app.css`                        | Application styles and framework configuration |
+| `resources/css/portfolio.css`                  | Portfolio layout, themes, and effects          |
+| `public/projects/`                             | Project screenshots and demonstrations         |
+| `public/images/`                               | Personal portrait                              |
+| `public/documents/`                            | Public résumé                                  |
+| `routes/web.php`                               | Web routes                                     |
+| `Dockerfile`                                   | Production image and asset build               |
+| `Caddyfile`                                    | Production web server configuration            |
+| `.dockerignore`                                | Files excluded from the container image        |
 
 ## Accessibility
 
@@ -255,18 +255,18 @@ The Dockerfile disables Inertia SSR for the current deployment.
 
 ## Project Progress
 
-| Phase | Milestone | Status |
-|---|---|---|
-| 0 | Planning and feature selection | Complete |
-| 1 | Laravel and React environment | Complete |
-| 1A | Supabase connection and migrations | Complete |
-| 2 | Portfolio sections and navigation | Complete |
-| 3 | Responsive layout and mobile menu | Complete |
-| 4 | Light and dark theme system | Complete |
-| 5 | Weather, cursor, and button effects | Complete |
-| 6 | Personal content and project showcases | Complete for first release |
-| 7 | Build validation and manual testing | Complete for first release |
-| 8 | GitHub publishing and Vercel deployment | Complete |
+| Phase | Milestone                               | Status                     |
+| ----- | --------------------------------------- | -------------------------- |
+| 0     | Planning and feature selection          | Complete                   |
+| 1     | Laravel and React environment           | Complete                   |
+| 1A    | Supabase connection and migrations      | Complete                   |
+| 2     | Portfolio sections and navigation       | Complete                   |
+| 3     | Responsive layout and mobile menu       | Complete                   |
+| 4     | Light and dark theme system             | Complete                   |
+| 5     | Weather, cursor, and button effects     | Complete                   |
+| 6     | Personal content and project showcases  | Complete for first release |
+| 7     | Build validation and manual testing     | Complete for first release |
+| 8     | GitHub publishing and Vercel deployment | Complete                   |
 
 Portfolio content is currently defined in React components. Supabase is connected, but project cards are not loaded from database records.
 

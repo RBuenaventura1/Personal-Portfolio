@@ -64,13 +64,11 @@ export default function CursorTrail() {
                 [
                     {
                         opacity: 0.65,
-                        transform:
-                            'translate(-50%, -50%) scale(1)',
+                        transform: 'translate(-50%, -50%) scale(1)',
                     },
                     {
                         opacity: 0,
-                        transform:
-                            'translate(-50%, 18px) scale(0.15)',
+                        transform: 'translate(-50%, 18px) scale(0.15)',
                     },
                 ],
                 {
@@ -91,37 +89,21 @@ export default function CursorTrail() {
         finePointer.addEventListener('change', clearParticles);
 
         return () => {
-            window.removeEventListener(
-                'pointermove',
-                handlePointerMove,
-            );
+            window.removeEventListener('pointermove', handlePointerMove);
 
             window.removeEventListener('blur', clearParticles);
-            document.removeEventListener(
-                'pointerleave',
-                clearParticles,
-            );
+            document.removeEventListener('pointerleave', clearParticles);
 
-            reducedMotion.removeEventListener(
-                'change',
-                clearParticles,
-            );
+            reducedMotion.removeEventListener('change', clearParticles);
 
-            finePointer.removeEventListener(
-                'change',
-                clearParticles,
-            );
+            finePointer.removeEventListener('change', clearParticles);
 
             clearParticles();
         };
     }, []);
 
     return (
-        <div
-            ref={trailRef}
-            className="cursor-trail"
-            aria-hidden="true"
-        >
+        <div ref={trailRef} className="cursor-trail" aria-hidden="true">
             {Array.from({ length: 16 }, (_, index) => (
                 <span key={index} className="cursor-particle" />
             ))}

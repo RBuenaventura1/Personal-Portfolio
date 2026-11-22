@@ -109,7 +109,7 @@ export default function Welcome() {
                 </a>
 
                 <header className="site-header">
-                    <div className="container header-content">
+                    <div className="header-content container">
                         <a
                             href="#home"
                             className="brand"
@@ -144,8 +144,9 @@ export default function Welcome() {
                                 type="button"
                                 className="theme-button"
                                 onClick={toggleTheme}
-                                aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'
-                                    } mode`}
+                                aria-label={`Switch to ${
+                                    theme === 'light' ? 'dark' : 'light'
+                                } mode`}
                             >
                                 <span aria-hidden="true">
                                     {theme === 'light' ? '☀' : '☾'}
@@ -220,7 +221,9 @@ export default function Welcome() {
 
                             <div className="art-footer">
                                 <span>DESIGN + DEVELOPMENT</span>
-                                <strong>Small ideas. Real possibilities.</strong>
+                                <strong>
+                                    Small ideas. Real possibilities.
+                                </strong>
                             </div>
                         </div>
                     </section>
@@ -247,7 +250,9 @@ export default function Welcome() {
 
                                 <figcaption>
                                     <strong>Rylie R. Buenaventura</strong>
-                                    <span>Web &amp; Mobile Application Student</span>
+                                    <span>
+                                        Web &amp; Mobile Application Student
+                                    </span>
                                 </figcaption>
                             </figure>
 
@@ -255,34 +260,37 @@ export default function Welcome() {
                                 <div className="about-copy">
                                     <p>
                                         I’m Rylie R. Buenaventura, pursuing a
-                                        Bachelor of Science in Information Technology
-                                        with a specialization in Web and Mobile
-                                        Application at FEU Institute of Technology.
+                                        Bachelor of Science in Information
+                                        Technology with a specialization in Web
+                                        and Mobile Application at FEU Institute
+                                        of Technology.
                                     </p>
 
                                     <p>
-                                        I enjoy exploring how thoughtful interfaces,
-                                        programming, and data come together to create
-                                        useful applications.
+                                        I enjoy exploring how thoughtful
+                                        interfaces, programming, and data come
+                                        together to create useful applications.
                                     </p>
 
                                     <p>
-                                        My project experience includes customer ordering
-                                        workflows, dashboard interfaces, Cloudinary media
+                                        My project experience includes customer
+                                        ordering workflows, dashboard
+                                        interfaces, Cloudinary media
                                         integration, and a Groq-powered chatbot.
-                                        I’m also developing Kahala Resort’s website
-                                        and reservation experience.
+                                        I’m also developing Kahala Resort’s
+                                        website and reservation experience.
                                     </p>
 
                                     <p>
                                         Beyond development, my interests include
-                                        digital photography and game development,
-                                        especially design, mechanics, and player psychology.
+                                        digital photography and game
+                                        development, especially design,
+                                        mechanics, and player psychology.
                                     </p>
 
                                     <p className="organization">
-                                        Member, Alliance of Information Technology
-                                        Students · 2025–present
+                                        Member, Alliance of Information
+                                        Technology Students · 2025–present
                                     </p>
 
                                     <div className="about-links">
@@ -312,14 +320,19 @@ export default function Welcome() {
                                             LinkedIn
                                         </a>
 
-                                        <a href="#contact" className="text-link">
+                                        <a
+                                            href="#contact"
+                                            className="text-link"
+                                        >
                                             Get in touch
                                         </a>
                                     </div>
                                 </div>
 
                                 <aside className="education-card">
-                                    <p className="eyebrow">My current chapter</p>
+                                    <p className="eyebrow">
+                                        My current chapter
+                                    </p>
 
                                     <h3>FEU Institute of Technology</h3>
 
@@ -435,9 +448,7 @@ export default function Welcome() {
                         rb<span>.</span>
                     </a>
 
-                    <p>
-                        © {new Date().getFullYear()} Rylie Buenaventura
-                    </p>
+                    <p>© {new Date().getFullYear()} Rylie Buenaventura</p>
 
                     <a href="#home">Back to top ↑</a>
                 </footer>
